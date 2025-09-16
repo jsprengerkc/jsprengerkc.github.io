@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jason Sprenger | Case Study</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <style>
+      body { background-color: #242628; background-image: url(./assets/Wallpaper.png); background-repeat: no-repeat; background-position-x: center; background-attachment: fixed; }
+      h1, h2, h3, h4, h5, h6 { font-weight:300; font-family: 'Jost', sans-serif; }
+      h1 { line-height:1.1em !important; }
+      p, li, label, input, button { font-family: Arial, Helvetica, sans-serif; font-size: .9em; line-height:1.75em; opacity:.95; }
+      li::marker { color:rgb(13, 110, 253); }
+      strong { font-weight: 700; }
+      small { font-size: .6em; }
+      .text-expand { letter-spacing:.5em; }
+      .box { opacity: 0; }
+      .box.animate__animated { opacity: 1; }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100 animate__animated animate__fadeIn">
+    <div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header pt-4 pe-4 justify-content-end">
+        <btn type="button" class="text-white link-opacity-50-hover" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="offcanvas-body col-10">
+        <ul class="nav flex-column h6">
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="skills.html">Skills</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="services.html">Services</a></li>
+          <li class="nav-item mb-3"><a class="nav-link text-white" href="reviews.html">Reviews</a></li>
+          <li class="nav-item border-top border-white border-opacity-50 pt-3 mb-2"><a class="nav-link text-white" href="https://www.linkedin.com/in/jsprenger/"><i class="bi bi-linkedin me-2"></i> LinkedIn</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="mailto:jsprenger.kc@gmail.com"><i class="bi bi-envelope-fill me-2"></i> Contact</a></li>
+          </ul>
+      </div>
+    </div>
+    <header class="container-fluid pt-4">
+      <div class="container">
+        <div class="row text-white">
+          <div class="col">
+            <div class="ps-md-1">
+              <p class="h6 mt-3 mt-md-5 mb-1"><strong>Jason Sprenger</strong></p>
+              <p class="mb-3">Senior Designer <span class="d-none d-md-inline"><span class="text-primary mx-2">&bull;</span> Creative Problem Solver <span class="text-primary mx-2">&bull;</span> Visual Storyteller</span></p>
+            </div>
+          </div>
+          <div class="col-2 col-md-4 text-md-end">
+            <ul class="nav justify-content-end">
+              <li class="nav-item mx-1 d-none d-md-inline"><a class="nav-link badge rounded-circle p-3 text-white bg-light bg-opacity-25" href="mailto:jsprenger.kc@gmail.com" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><i class="bi bi-envelope-fill h5"></i></a></li>
+              <li class="nav-item mx-1 d-none d-md-inline"><a class="nav-link badge rounded-circle p-3 text-white bg-light bg-opacity-25" href="https://www.linkedin.com/in/jsprenger/" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><i class="bi bi-linkedin h5"></i></a></li>
+              <li class="nav-item d-md-none"><a class="nav-link text-white" href="" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu"><i class="bi bi-list h2 fw-bold"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mb-2 mb-md-5">
+          <div class="col">
+            <ul class="nav nav-underline d-none d-md-flex">
+              <li class="nav-item"><a class="nav-link px-2" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="skills.html">Skills</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="reviews.html">Reviews</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+    </header>
+
+    <div class="flex-grow-1 container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11 text-white">
+            <p class="text-primary text-expand text-uppercase mb-1">Case Study</p>
+            <h1 class="display-5 mb-md-5"><strong>Enhancing Learning Through <br /><span class="text-primary">Interactive Design</span></strong></h1>
+            <div class="row justify-content-between pb-2 mb-md-5">
+              <div class="col-md-6 text-white">
+                <h3 class="h4 pt-3 pt-md-0"><strong>Project Management Workbook</strong></h3>
+                <p class="">A virtual project management course needed a way to bridge the gap between theory and practice. While the course delivered strong foundational content, learners struggled to apply key concepts to real-world scenarios. Engagement levels were inconsistent, and knowledge retention dropped significantly after course completion.</p>
+                <p class="mb-4">The challenge was to create an interactive workbook that could function both digitally and in print—guiding learners through each phase of the project lifecycle with hands-on exercises, case studies, and reusable templates.</p>
+                <h5 class="text-primary"><strong>My Approach</strong></h5>
+                <p>I designed and developed a comprehensive Project Management Workbook to transform passive learning into an active, applied experience. </p>
+                <p class="mb-2"><strong>Key strategies included:</strong></p>
+                <ul>
+                  <li class="mb-2">Applied learning framework: Integrated exercises and real-world case studies for each project phase—initiation, planning, execution, monitoring, and closing.</li>
+                  <li class="mb-2">Reusable tools and templates: Ready-to-use project charters, risk matrices, Gantt chart templates, and stakeholder maps for practical application beyond the course.</li>
+                  <li class="mb-2">Interactive digital experience: Hyperlinked navigation and fillable fields to support seamless digital use, while maintaining print-friendly layouts.</li>
+                  <li class="mb-2">Consistent visual design: Clean, professional design system to enhance readability and reinforce key learning points.</li>
+                </ul>
+                <h5 class="text-primary mt-5"><strong>The Impact</strong></h5>
+                <p>The workbook elevated the virtual learning experience by providing learners with a structured, hands-on guide they could use during and after the course. Engagement increased as participants actively applied concepts, and post-course surveys showed measurable gains in knowledge retention and confidence in managing projects.</p>
+                <p>By equipping learners with practical tools, the workbook strengthened the overall effectiveness of the project management training and improved learner satisfaction scores.</p>
+                <h5 class="text-primary mt-4"><strong>Tools Used</strong></h5>
+                <p>Adobe InDesign &bull; Adobe Photoshop &bull; Adobe Illustrator &bull; Acrobat Pro</p>
+                <p class="d-none d-md-inline-block mt-5"><a href="portfolio.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Back</a></p>
+              </div>
+              <div class="col-md-5 pt-5 py-md-0">
+                <div class="container my-5">
+                  <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide"><img src="assets/SP_WK_P100_06.jpg" class="img-fluid" alt="Page 1"></li>
+                        <li class="glide__slide"><img src="assets/SP_WK_P100_07.jpg" class="img-fluid" alt="Page 2"></li>
+                        <li class="glide__slide"><img src="assets/SP_WK_P100_08.jpg" class="img-fluid" alt="Page 3"></li>
+                        <li class="glide__slide"><img src="assets/SP_WK_P100_09.jpg" class="img-fluid" alt="Page 4"></li>
+                        <li class="glide__slide"><img src="assets/SP_WK_P100_10.jpg" class="img-fluid" alt="Page 4"></li>
+                      </ul>
+                    </div>
+                    <!-- Navigation arrows -->
+                    <div class="glide__arrows text-center pt-3" data-glide-el="controls">
+                      <button class="glide__arrow glide__arrow--left bg-transparent shadow-none border-0" data-glide-dir="<"><i class="bi bi-arrow-left-circle text-white text-opacity-50 h1" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"></i></button>
+                      <button class="glide__arrow glide__arrow--right bg-transparent shadow-none border-0" data-glide-dir=">"><i class="bi bi-arrow-right-circle text-white text-opacity-50 h1" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"></i></button>
+                    </div>
+
+                  </div>
+                </div>
+                <script>
+                  new Glide('.glide', { type: 'carousel', perView: 1 }).mount();
+                </script>
+              </div>
+            </div>
+            <p class="d-md-none text-center"><a href="portfolio.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Back</a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container-fluid bg-primary text-white pt-2 pb-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="mb-0 text-end"><small>© 2025. All rights reserved.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
