@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jason Sprenger | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body { background-color: #242628; background-image: url(./assets/Wallpaper.png); background-repeat: no-repeat; background-position-x: center; background-attachment: fixed; }
+      h1, h2, h3, h4, h5, h6 { font-weight:300; font-family: 'Jost', sans-serif; }
+      h1 { line-height:1.1em !important; }
+      p, li, label, input, button { font-family: Arial, Helvetica, sans-serif; font-size: .9em; line-height:1.75em; opacity:.95; }
+      li::marker { color:rgb(13, 110, 253); }
+      strong { font-weight: 700; }
+      small { font-size: .6em; }
+      .text-expand { letter-spacing:.5em; }
+      .box { opacity: 0; }
+      .box.animate__animated { opacity: 1; }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate__animated');
+              entry.target.classList.add('animate__fadeInUp');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.05 
+        });
+      
+        document.querySelectorAll('.box').forEach(box => {
+          observer.observe(box);
+        });
+      });
+    </script>
+  </head>
+  <body class="d-flex flex-column min-vh-100 animate__animated animate__fadeIn">
+    <div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header pt-4 pe-4 justify-content-end">
+        <btn type="button" class="text-white link-opacity-50-hover" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="offcanvas-body col-10">
+        <ul class="nav flex-column h6">
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" aria-disabled="true" href="#">Portfolio</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="skills.html">Skills</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="services.html">Services</a></li>
+          <li class="nav-item mb-3"><a class="nav-link text-white" href="reviews.html">Reviews</a></li>
+          <li class="nav-item border-top border-white border-opacity-50 pt-3 mb-2"><a class="nav-link text-white" href="https://www.linkedin.com/in/jsprenger/"><i class="bi bi-linkedin me-2"></i> LinkedIn</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="mailto:jsprenger.kc@gmail.com"><i class="bi bi-envelope-fill me-2"></i> Contact</a></li>
+          </ul>
+      </div>
+    </div>
+    <header class="container-fluid pt-4">
+      <div class="container">
+        <div class="row text-white">
+          <div class="col">
+            <div class="ps-md-1">
+              <p class="h6 mt-3 mt-md-5 mb-1"><strong>Jason Sprenger</strong></p>
+              <p class="mb-3">Senior Designer <span class="d-none d-md-inline"><span class="text-primary mx-2">&bull;</span> Creative Problem Solver <span class="text-primary mx-2">&bull;</span> Visual Storyteller</span></p>
+            </div>
+          </div>
+          <div class="col-2 col-md-4 text-md-end">
+            <ul class="nav justify-content-end">
+              <li class="nav-item mx-1 d-none d-md-inline"><a class="nav-link badge rounded-circle p-3 text-white bg-light bg-opacity-25" href="mailto:jsprenger.kc@gmail.com" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><i class="bi bi-envelope-fill h5"></i></a></li>
+              <li class="nav-item mx-1 d-none d-md-inline"><a class="nav-link badge rounded-circle p-3 text-white bg-light bg-opacity-25" href="https://www.linkedin.com/in/jsprenger/" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><i class="bi bi-linkedin h5"></i></a></li>
+              <li class="nav-item d-md-none"><a class="nav-link text-white" href="" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu"><i class="bi bi-list h2 fw-bold"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mb-2 mb-md-5">
+          <div class="col">
+            <ul class="nav nav-underline d-none d-md-flex">
+              <li class="nav-item"><a class="nav-link px-2" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white px-2" aria-disabled="true" href="#">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="skills.html">Skills</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="reviews.html">Reviews</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+    </header>
+
+    <div class="flex-grow-1 container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11 text-white">
+            <h1 class="display-4 mb-md-5"><strong>Design <span class="text-primary">Portfolio</span></strong></h1>
+
+            <div class="row justify-content-between pb-2 mb-5">
+              <div class="col-md-5 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Packaging"><img class="img-fluid rounded" src="assets/Packaging.png"></a>
+              </div>
+              <div class="col-md-6 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Packaging</p>
+                <h3 class="h4"><strong>Product Art for Bourbon <br />Chocolate Fudge</strong></h3>
+                <p class="mb-4">The challenge for this project was to create an intuitive and engaging online experience for SkillPath's flagship first-time leadership course, specifically to encourage registrations for both in-person and virtual sessions. My task involved developing a web page design featuring a clear information hierarchy and an optimized user experience, simplifying navigation and highlighting the course's key benefits. The goal was to increase conversion rates by providing a seamless journey for aspiring leaders to discover and enroll in essential management training.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Photoshop, Adobe Illustrator, Adobe InDesign</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Packaging" tabindex="-1" aria-labelledby="PackagingLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Packaging.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-5 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Signage"><img class="img-fluid rounded" src="assets/Signage.png"></a>
+              </div>
+              <div class="col-md-6 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Branding</p>
+                <h3 class="h4"><strong>Crafting the Identity for <br />The Antler Room</strong></h3>
+                <p class="mb-4">This project addressed the challenge of creating a distinctive and memorable visual identity for The Antler Room, a new, up-and-coming Kansas City restaurant, that would encapsulate its unique ambiance and culinary approach. My collaboration with the owners resulted in a comprehensive logo design that successfully blended sophistication with evocative elements, reflecting the establishment's character. The direct impact was an enhanced brand presence and recognition for the restaurant, providing a strong visual cornerstone for its identity.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Illustrator</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Signage" tabindex="-1" aria-labelledby="SignageLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Signage.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Wordpress"><img class="img-fluid rounded" src="assets/Wordpress.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Web</p>
+                <h3 class="h4"><strong>Your Nutrition Design</strong></h3>
+                <p class="mb-4">The challenge was to design a user-friendly and effective website for a nutrition consultant that would attract and inform potential clients seeking guidance. My solution involved creating a clean, aesthetically pleasing website with intuitive navigation and strategically placed compelling calls to action. The intended impact was to streamline the client acquisition process, making it easy for visitors to find information and connect with the consultant for their nutritional needs.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Photoshop, Adobe Lightroom, WordPress, Brackets, HTML5, CSS</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Wordpress" tabindex="-1" aria-labelledby="WordpressLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Wordpress.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-5 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Book"><img class="img-fluid rounded" src="assets/Book.png"></a>
+              </div>
+              <div class="col-md-6 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Book</p>
+                <h3 class="h4"><strong>Visualizing Empathy: <br />&ldquo;The Compassionate Geek&rdquo;</strong></h3>
+                <p class="mb-4">This book design was to visually represent the core message of "The Compassionate Geek" – integrating empathy and human connection within the often technical world of IT. My solution involved a creative design that was both approachable and impactful, conveying the book's unique blend of practical advice and emotional intelligence. The intended impact was to immediately communicate the book's essence to potential readers, drawing them in with a design that highlighted its innovative perspective.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe InDesign, Adobe Photoshop, Adobe Acrobat Pro</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Book" tabindex="-1" aria-labelledby="BookLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Book.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-5 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Guidebook"><img class="img-fluid rounded" src="assets/Guidebook.png"></a>
+              </div>
+              <div class="col-md-6 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Print</p>
+                <h3 class="h4"><strong>Elevating the Practice: Yoga Teacher <br />Training Course</strong></h3>
+                <p class="mb-4">This project's aim was to create a visual identity for a yoga studio's teacher training course that embodied the tranquility, growth, and depth of a yoga practice, while also communicating the professional and transformative nature of the training. My solution was the design of a course book cover that artfully combined elements of serenity and strength. The impact was to inspire prospective teachers and clearly reflect the studio's dedication to holistic development, attracting qualified candidates to the program.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe InDesign, Adobe Photoshop, Adobe Acrobat Pro</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Guidebook" tabindex="-1" aria-labelledby="GuidebookLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Guidebook.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-5 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Card"><img class="img-fluid rounded" src="assets/Card.png"></a>
+              </div>
+              <div class="col-md-6 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Packaging Card</p>
+                <h3 class="h4"><strong>Sweet Gratitude: Thank You Card</strong></h3>
+                <p class="mb-4">This project addressed the challenge of crafting a small yet impactful piece for Brigabon Candy Co. that would extend the brand's delightful and indulgent experience beyond the candy boxes themselves. My solution was the design of a charming thank you card that reflected Brigabon's brand personality and reinforced customer appreciation. The intended impact was to ensure a memorable unboxing experience for customers, fostering loyalty and a deeper connection with the brand.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe InDesign, Adobe Photoshop, Adobe Acrobat Pro</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Card" tabindex="-1" aria-labelledby="CardLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Card.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container-fluid bg-primary text-white pt-2 pb-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="mb-0 text-end"><small>© 2025. All rights reserved.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

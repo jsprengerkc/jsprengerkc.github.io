@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jason Sprenger | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body { background-color: #242628; background-image: url(./assets/Wallpaper.png); background-repeat: no-repeat; background-position-x: center; background-attachment: fixed; }
+      h1, h2, h3, h4, h5, h6 { font-weight:300; font-family: 'Jost', sans-serif; }
+      h1 { line-height:1.1em !important; }
+      p, li, label, input, button { font-family: Arial, Helvetica, sans-serif; font-size: .9em; line-height:1.75em; opacity:.95; }
+      li::marker { color:rgb(13, 110, 253); }
+      strong { font-weight: 700; }
+      small { font-size: .6em; }
+      .text-expand { letter-spacing:.5em; }
+      .box { opacity: 0; }
+      .box.animate__animated { opacity: 1; }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate__animated');
+              entry.target.classList.add('animate__fadeInUp');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.05 
+        });
+      
+        document.querySelectorAll('.box').forEach(box => {
+          observer.observe(box);
+        });
+      });
+    </script>
+  </head>
+  <body class="d-flex flex-column min-vh-100 animate__animated animate__fadeIn">
+    <div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header pt-4 pe-4 justify-content-end">
+        <btn type="button" class="text-white link-opacity-50-hover" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="offcanvas-body col-10">
+        <ul class="nav flex-column h6">
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" aria-disabled="true" href="#">Portfolio</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="skills.html">Skills</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-white" href="services.html">Services</a></li>
+          <li class="nav-item mb-3"><a class="nav-link text-white" href="reviews.html">Reviews</a></li>
+          <li class="nav-item border-top border-white border-opacity-50 pt-3 mb-2"><a class="nav-link text-white" href="https://www.linkedin.com/in/jsprenger/"><i class="bi bi-linkedin me-2"></i> LinkedIn</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="mailto:jsprenger.kc@gmail.com"><i class="bi bi-envelope-fill me-2"></i> Contact</a></li>
+          </ul>
+      </div>
+    </div>
+    <header class="container-fluid pt-4">
+      <div class="container">
+        <div class="row text-white">
+          <div class="col">
+            <div class="ps-md-1">
+              <p class="h6 mt-3 mt-md-5 mb-1"><strong>Jason Sprenger</strong></p>
+              <p class="mb-3">Senior Designer <span class="d-none d-md-inline"><span class="text-primary mx-2">&bull;</span> Creative Problem Solver <span class="text-primary mx-2">&bull;</span> Visual Storyteller</span></p>
+            </div>
+          </div>
+          <div class="col-2 col-md-4 text-md-end">
+            <ul class="nav justify-content-end">
+              <li class="nav-item mx-1 d-none d-md-inline"><a class="nav-link badge rounded-circle p-3 text-white bg-light bg-opacity-25" href="mailto:jsprenger.kc@gmail.com" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><i class="bi bi-envelope-fill h5"></i></a></li>
+              <li class="nav-item mx-1 d-none d-md-inline"><a class="nav-link badge rounded-circle p-3 text-white bg-light bg-opacity-25" href="https://www.linkedin.com/in/jsprenger/" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><i class="bi bi-linkedin h5"></i></a></li>
+              <li class="nav-item d-md-none"><a class="nav-link text-white" href="" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu"><i class="bi bi-list h2 fw-bold"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mb-2 mb-md-5">
+          <div class="col">
+            <ul class="nav nav-underline d-none d-md-flex">
+              <li class="nav-item"><a class="nav-link px-2" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white px-2" aria-disabled="true" href="#">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="skills.html">Skills</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link px-2" href="reviews.html">Reviews</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+    </header>
+
+    <div class="flex-grow-1 container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11 text-white">
+            <h1 class="display-4 mb-md-5"><strong>Design <span class="text-primary">Portfolio</span></strong></h1>
+
+            <div class="row justify-content-between pb-2 mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#LandingPage"><img class="img-fluid rounded" src="assets/LandingPage.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Web</p>
+                <h3 class="h4"><strong>Management Skills for <span class="d-none d-md-inline"><br /></span>Aspiring Leaders</strong></h3>
+                <p class="mb-4">The challenge for this project was to create an intuitive and engaging online experience for SkillPath's flagship first-time leadership course, specifically to encourage registrations for both in-person and virtual sessions. My task involved developing a web page design featuring a clear information hierarchy and an optimized user experience, simplifying navigation and highlighting the course's key benefits. The goal was to increase conversion rates by providing a seamless journey for aspiring leaders to discover and enroll in essential management training.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> CloudCMS, Visual Studio Code, Adobe Photoshop, Figma, Canto, HTML5, CSS, Javascript</em></p>
+                <p><a href="empowering-the-next-generation.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Learn more</a></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="LandingPage" tabindex="-1" aria-labelledby="LandingPageLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/LandingPage.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Elearning"><img class="img-fluid rounded" src="assets/Elearning.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Web</p>
+                <h3 class="h4"><strong>Learning Experience Platform</strong></h3>
+                <p class="mb-4">My work on this project addressed the challenge of designing a conversion-focused web page for <a class="link-primary" href="https://learn.skillpath.com" target="_blank">learn.skillpath.com</a> that seamlessly guides users to discover and enroll in professional development courses. The solution was an optimized web experience built with intuitive navigation and compelling calls to action, engineered for effortless course exploration and enrollment. The ultimate impact aimed to boost conversion rates, making it significantly easier for professionals to access and sign up for valuable learning opportunities.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Visual Studio Code, Adobe Photoshop, Figma, Canto, HTML5, CSS, Javascript</em></p>
+                <p><a href="streamlining-the-path-to-learning.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Learn more</a></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Elearning" tabindex="-1" aria-labelledby="ElearningLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Elearning.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Mockup"><img class="img-fluid rounded" src="assets/Mockup.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Web</p>
+                <h3 class="h4"><strong>Elevating Digital Engagement</strong></h3>
+                <p class="mb-4">The core challenge here was to refresh the <a class="link-primary" href="https://www.skillpath.com" target="_blank">skillpath.com</a> homepage, aiming to enhance engagement and streamline the user journey for visitors seeking professional development resources. My solution involved developing a comprehensive homepage design mockup that prioritized intuitive UI/UX principles, improved navigation, and a visually appealing presentation. The intended impact was to create a more engaging and user-friendly entry point to SkillPath's offerings, effectively highlighting the extensive course catalog and guiding visitors to relevant content.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Photoshop, Figma, Visual Studio Code, CloudCMS, Canto, HTML5, CSS, Javascript</em></p>
+                <p><a href="elevating-digital-engagement.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Learn more</a></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Mockup" tabindex="-1" aria-labelledby="MockupLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Mockup.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Touchscreen"><img class="img-fluid rounded" src="assets/Touchscreen.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Interactive</p>
+                <h3 class="h4"><strong>Enterprise Solutions CourseBuilder</strong></h3>
+                <p class="mb-4">This project addressed the challenge of empowering SkillPath's group training sales representatives with a tool that enabled them to quickly and accurately design customized training courses collaboratively with clients. My solution was the development of a SharePoint-driven digital CourseBuilder tool, allowing sales reps to create bespoke training solutions in real-time alongside their clients. The direct impact was an accelerated sales cycle for customized training programs, significantly improving efficiency for both sales teams and clients.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe XD, Microsoft SharePoint,  Acrobat Pro, Brackets, HTML5, CSS, Node, Javascript</em></p>
+                <p><a href="accelerating-sales-through-custom-design.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Learn more</a></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Touchscreen" tabindex="-1" aria-labelledby="TouchscreenLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <video class="object-fit-fill" width="100%" controls>
+                        <source src="assets/Demo.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Email2"><img class="img-fluid rounded" src="assets/Email(2).jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Email</p>
+                <h3 class="h4"><strong>Mastering Workplace Conflict</strong></h3>
+                <p class="mb-4">This project addresses the challenge of effectively engaging organizational leaders and HR professionals. The solution was a well-crafted email campaign with compelling messaging and clear calls to action, specifically tailored to demonstrate SkillPath's value in conflict resolution and communication training. The intended impact was to drive inquiries and enrollments, positioning SkillPath as the essential resource for equipping teams with these vital workplace skills.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Photoshop, Brackets, Salesforce Marketing Cloud, HTML5, CSS</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Email2" tabindex="-1" aria-labelledby="Email2Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Email(2).jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Email"><img class="img-fluid rounded" src="assets/Email.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Email</p>
+                <h3 class="h4"><strong>Equipping New Managers for Success</strong></h3>
+                <p class="mb-4">An email campaign was designed to address the challenge of promoting entry-level employees into management roles. The solution was a targeted email series with messaging that highlighted the critical need for specific management skills, showcasing how SkillPath's training empowers newly appointed leaders and benefits the organization. The intended impact was to drive inquiries and enrollments in management training programs, ensuring a smoother transition and greater success for both new managers and their teams.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Photoshop, Adobe Illustrator, Brackets, Salesforce Marketing Cloud, HTML5, CSS</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Email" tabindex="-1" aria-labelledby="EmailLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Email.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Catalog"><img class="img-fluid rounded" src="assets/Catalog.jpg"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Print</p>
+                <h3 class="h4"><strong>Professional Training Guide</strong></h3>
+                <p class="mb-4">The goal of this project was to create a comprehensive, organized, and effective print catalog to serve as a vital sales tool for SkillPath's large-scale group training solutions. The design featured clearly organized course categories, strategic infographics highlighting key benefits, and dedicated sections for various training modalities. The impact was to equip sales teams with an accessible print and digital resource, enabling them to help clients quickly identify relevant training solutions and streamlining the sales process for organizational engagement.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe InDesign, Adobe Photoshop, Adobe Illustrator, Acrobat Pro</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Catalog" tabindex="-1" aria-labelledby="CatalogLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Catalog.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#Workbook"><img class="img-fluid rounded" src="assets/Workbook.png"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Print</p>
+                <h3 class="h4"><strong>Project Management Workbook</strong></h3>
+                <p class="mb-4">This project addressed the need to enhance a virtual project management course with an interactive learning tool that could be used both digitally and in print. My task was to design and develop a comprehensive user workbook that reinforced key concepts through practical exercises, case studies, and templates. The intended impact was to significantly increase learner engagement and retention, providing a hands-on experience that guided participants through the entire project management process from initiation to close.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe InDesign, Adobe Photoshop, Adobe Illustrator, Acrobat Pro</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Workbook" tabindex="-1" aria-labelledby="WorkbookLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Workbook.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="" data-bs-toggle="modal" data-bs-target="#DirectMail"><img class="img-fluid rounded" src="assets/DirectMail.png"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Print</p>
+                <h3 class="h4"><strong>Commitment to Lifelong Learning</strong></h3>
+                <p class="mb-4">This project addressed the desire to effectively promote the strategic partnership between Graceland University and SkillPath, specifically highlighting lifelong learning opportunities for university alumni. My task was to design a compelling flyer with a clear, engaging, and informative layout that succinctly outlined the benefits and accessibility of continued education. The intended impact was to strengthen the partnership's visibility and encourage Graceland University alumni to pursue ongoing professional development through SkillPath's diverse offerings.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe InDesign, Adobe Photoshop, Adobe Illustrator, Acrobat Pro</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="DirectMail" tabindex="-1" aria-labelledby="DirectMailLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/DirectMail.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <a class="pe-auto" data-bs-toggle="modal" data-bs-target="#Booth"><img class="img-fluid rounded" src="assets/Booth.png"></a>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Tradeshow</p>
+                <h3 class="h4"><strong>ATD Conference Booth Design</strong></h3>
+                <p class="mb-4">My involvement in this project addressed the challenge of designing an impactful and engaging booth for the ATD International Conference & Exposition that clearly communicated SkillPath's expertise across five key training pillars. The solution was a comprehensive booth design incorporating engaging graphics, interactive elements, and a strategic layout to visually represent SkillPath's core offerings: Leadership, Communication, Teamwork, Compliance, and Productivity. The direct impact was successfully attracting attendees and clearly articulating SkillPath's value proposition in professional development, fostering lead generation and brand recognition at a major industry event.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Brackets, HTML5, CSS, Node</em></p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="Booth" tabindex="-1" aria-labelledby="BoothLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg pt-5">
+                  <div class="modal-content bg-transparent border-0">
+                    <div class="text-end pt-4 px-4">
+                      <button type="button" class="bg-transparent shadow-none border-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid rounded" src="assets/Booth.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between mb-5">
+              <div class="col-md-6 pt-4 order-md-last">
+                <video class="object-fit-fill" width="100%" controls>
+                  <source src="assets/Success.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-md-5 text-white order-md-first">
+                <p class="text-primary mt-3 mt-md-0 mb-1">Video</p>
+                <h3 class="h4"><strong>Empowering Leaders for Success</strong></h3>
+                <p class="mb-4">This video testimonial effectively showcases the practical value of SkillPath's leadership training and equips leaders to ensure successful training experiences for their teams. The result of my collaboration with SkillPath's in-house video team showcases a course presenter who shares actionable insights on fostering positive learning environments and ensuring the practical application of new skills. The intended impact was to provide tangible strategies for leaders to maximize training effectiveness, reinforcing SkillPath's commitment to empowering successful teams and enhancing participant outcomes.</p>
+                <p class="mb-4"><em><strong>Tools:</strong> Adobe Illustrator, Adobe After Effects</em></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container-fluid bg-primary text-white pt-2 pb-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="mb-0 text-end"><small>© 2025. All rights reserved.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
